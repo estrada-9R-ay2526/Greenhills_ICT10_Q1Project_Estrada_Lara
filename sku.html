@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>Skills Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <strong>Skewer</strong>
+
+        <span class="nav-links">
+            <a href="sku.html">SKU Generator</a>
+            <a href="index.html">Receipt Generator</a>
+        </span>
+    </nav>
+
+
+    <div class="container">
+
+        <h1>SKU Generator</h1>
+
+        <label for="category">Category</label>
+
+        <select id="category">
+            <option value="PER">Perishables</option>
+            <option value="BEV">Beverages</option>
+            <option value="SNK">Snacks</option>
+            <option value="ELE">Electronics</option>
+            <option value="CLO">Clothing</option>
+        </select>
+
+
+        <label for="product">Product Name</label>
+
+        <input
+            type="text"
+            id="product"
+            placeholder="e.g. Bottled Water"
+        >
+
+
+        <label for="quantity">Stock Quantity</label>
+
+        <input
+            type="number"
+            id="quantity"
+            placeholder="e.g. 50"
+        >
+
+
+        <button type="button" py-click="generate_sku">
+            Generate SKU
+        </button>
+
+        <hr>
+
+        <div id="result">
+            Your generated SKU will appear here.
+        </div>
+
+    </div>
+
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
